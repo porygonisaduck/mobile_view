@@ -59,16 +59,17 @@ nav li {
 }
 
 nav a {
-    display: inline;
+    display: inline-block;
     text-decoration: none;
     padding-left: 10px;
     color: white;
-    width: 100%;
+    width: 90%;
 }
 
 @keyframes icon-transformation {
-    from {border-radius: 100%;}
-    to {border-radius: 0%;}
+    0% {border-radius: 100%;}
+    50% {border-radius: 0%;}
+    100% {border-radius: 100%;}
 }
 
 .icon {
@@ -87,6 +88,14 @@ li:hover .icon {
     visibility: visible;
     animation-name: icon-transformation;
     animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    li:hover .icon {
+        animation-iteration-count: 0;
+    }
 }
 
 li:hover a {
@@ -100,18 +109,26 @@ div {
     margin: auto;
 }
 
-div.pet {
+div.pet, div.recipe, div.location{
     border: 5px solid black;
     border-radius: 30px;
     padding: 30px;
     margin: 0px auto 10px auto;
 }
 
-img {
-    display: block;
+div.pet > img, div.starting-image > img{
     width: 80%;
+    height: auto;
+}
+
+img{
+    aspect-ratio: 1 / 1;
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     border: 5px solid #015048;
-    padding: 10px;
+    padding: 2px;
     margin: auto;
     border-radius: 30px;
 }
@@ -120,19 +137,65 @@ div.gallery {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 5px;
+    justify-content: center;
 }
 
 /* Travel */
 
-figure {
+.gif {
+    display: block;
+}
+
+.img {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .gif { display: none; }
+    .img { display: block; } 
+}
+
+/* .gallery-figure {
     display: grid;
-    margin-left: 0px;
-    grid-template-columns: 10fr 1fr;
-    gap: 10px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+} */
+
+figure {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+/* .gallery-figure {
+    display: inline-block;
     width: 100%;
 }
 
-figcaption {
+figure {
+    display: inline-block;
+    width: 30%;
+} */
+
+/* figure > figcaption {
+    background-color:rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    position: relative;
+    width: 80%;
+    top: -110px;
     margin: auto;
-}
+    opacity: 1;
+    display: inline-block;
+    border-radius: 5px;
+} */
+
+/* img:hover + figcaption {
+    opacity: 0.8;
+} */
