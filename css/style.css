@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
 body {
     color: #000000;
+    font-family: 'Ubuntu';
 }
 
 /* Header */
@@ -116,7 +119,7 @@ div.pet, div.recipe, div.location{
     margin: 0px auto 10px auto;
 }
 
-div.pet > img, div.starting-image > img{
+div.pet > img, div.starting-image > img, .main-dish {
     width: 80%;
     height: auto;
 }
@@ -157,15 +160,6 @@ div.gallery {
     .img { display: block; } 
 }
 
-/* .gallery-figure {
-    display: grid;
-    margin: auto;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    width: 100%;
-    justify-content: center;
-} */
-
 figure {
     display: block;
     margin-block-start: 0;
@@ -174,28 +168,25 @@ figure {
     margin-inline-end: 0;
 }
 
-/* .gallery-figure {
-    display: inline-block;
-    width: 100%;
+/* Recipe */
+
+span {
+    display:block;
 }
 
-figure {
-    display: inline-block;
-    width: 30%;
-} */
+/* #e20d32 */
 
-/* figure > figcaption {
-    background-color:rgba(255, 255, 255, 0.8);
-    z-index: 1;
-    position: relative;
-    width: 80%;
-    top: -110px;
-    margin: auto;
-    opacity: 1;
-    display: inline-block;
-    border-radius: 5px;
-} */
+div.buttons + div {
+    display: none;
+}
 
-/* img:hover + figcaption {
-    opacity: 0.8;
-} */
+button {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.buttons {
+    text-align: center;
+}
+
+
