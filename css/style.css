@@ -131,6 +131,10 @@ div.pet > img, div.starting-image > img, .main-dish {
     height: auto;
 }
 
+.main-dish {
+    margin: 10px auto;
+}
+
 img{
     aspect-ratio: 1 / 1;
     display: block;
@@ -149,6 +153,19 @@ div.gallery {
     grid-template-columns: 1fr 1fr;
     gap: 5px;
     justify-content: center;
+}
+
+div.buttons + div {
+    display: none;
+}
+
+button {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.buttons {
+    text-align: center;
 }
 
 /* Travel */
@@ -175,35 +192,20 @@ figure {
     margin-inline-end: 0;
 }
 
+div.lb-container {
+    width: 100%;
+}
+
 /* Recipe */
 
 span {
     display:block;
 }
 
-/* #e20d32 */
-
-div.buttons + div {
-    display: none;
-}
-
-button {
-    display: inline-block;
-    margin: 10px auto;
-}
-
-.buttons {
-    text-align: center;
-}
-
-div#ingredients-1, div#ingredients-2, div#ingredients-3, div#recipe-1, div#recipe-2, div#recipe-3 {
-    width: 100%;
-}
-
 #ingredients-1, #ingredients-2, #ingredients-3, #recipe-1, #recipe-2, #recipe-3 {
     display: none;
+    margin: 0px;
 }
 
-div.lb-container {
-    width: 100%;
-}
+/* #e20d32 */
+
