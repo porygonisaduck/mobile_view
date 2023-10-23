@@ -59,6 +59,9 @@ nav li {
     background-color: whitesmoke;
     border-radius: 100%;
     margin-left: 10px;
+    animation-name: icon-transformation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 nav a {
@@ -97,6 +100,10 @@ li:hover .icon {
 @media (prefers-reduced-motion: reduce) {
 
     li:hover .icon {
+        animation-iteration-count: 0;
+    }
+
+    .active-icon {
         animation-iteration-count: 0;
     }
 }
@@ -189,4 +196,14 @@ button {
     text-align: center;
 }
 
+div#ingredients-1, div#ingredients-2, div#ingredients-3, div#recipe-1, div#recipe-2, div#recipe-3 {
+    width: 100%;
+}
 
+#ingredients-1, #ingredients-2, #ingredients-3, #recipe-1, #recipe-2, #recipe-3 {
+    display: none;
+}
+
+div.lb-container {
+    width: 100%;
+}
